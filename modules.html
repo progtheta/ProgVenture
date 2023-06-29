@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ProgVenture App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-module">
+        <h2>My Modules</h2>
+        <div class="module-card">
+            <div class="module-icon">
+                <i class="fas fa-language"></i>
+            </div>
+            <h3>Why Programming?</h3>
+            <p>How programming is related to {{ preference }}</p>
+            <a href="chapters.html" class="btn-module">Start Module <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="module-card">
+            <div class="module-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <h3>Introduction</h3>
+            <p>Fundamentals of programming.</p>
+            <a href="#" class="btn-module">Start Module <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="module-card">
+            <div class="module-icon">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>Conditional</h3>
+            <p>Condition that stops you from getting {{preference}}.</p>
+            <a href="#" class="btn-module">Start Module <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
