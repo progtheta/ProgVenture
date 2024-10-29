@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProgVenture</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Prog Ventures</h1>
+        <p>Note your Adventures</p>
+    </div>
+    <div class="notes-container">
+        <h2>Notes</h2>
+        <ul class="notes">
+            {% for note in notes %}
+            <li>
+                {{ note[1] }}
+                <a href="{{ url_for('edit', note_id=note[0]) }}">Edit</a>
+                <a href="{{ url_for('delete', note_id=note[0]) }}">Delete</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="form-container">
+        <h2>Add a Note</h2>
+        <form action="/add" method="post">
+            <textarea name="content" rows="4" cols="50"></textarea><br>
+            <button type="submit">Add Note</button>
+        </form>
+    </div>
+</body>
+
+</html>

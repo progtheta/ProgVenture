@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Note</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+    <h1>Edit Note</h1>
+    <div class="form-container">
+        <form action="/update/{{ note[0] }}" method="post">
+            <textarea name="content" rows="4" cols="50">{{ note[1] }}</textarea><br>
+            <input type="submit" value="Update Note">
+        </form>
+    </div>
+</body>
+
+</html>
